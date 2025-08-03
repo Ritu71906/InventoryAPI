@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace InventoryAPI.Models
 {
@@ -13,6 +14,7 @@ namespace InventoryAPI.Models
         public int CustomerId { get; set; }
 
         [ForeignKey("CustomerId")]
+        [JsonIgnore]
         public Customer Customer { get; set; }
 
         public List<OrderItem> OrderItems { get; set; }

@@ -82,7 +82,7 @@ namespace InventoryAPI.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("InventoryAPI.Models.OrderItem", b =>

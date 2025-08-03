@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250803052622_AddOrderAndOrderItem")]
+    [Migration("20250803090252_AddOrderAndOrderItem")]
     partial class AddOrderAndOrderItem
     {
         /// <inheritdoc />
@@ -85,7 +85,7 @@ namespace InventoryAPI.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("InventoryAPI.Models.OrderItem", b =>
